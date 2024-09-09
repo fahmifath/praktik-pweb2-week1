@@ -1,2 +1,7 @@
 # Jobsheet 1
-## Kelas dan Objek pada PHP OOP
+## Class dan Object pada PHP OOP
+### Class
+```sh
+class Mahasiswa
+```
+Class adalah
