@@ -5,7 +5,7 @@
 class Mahasiswa
 ```
 Class adalah blueprint atau template untuk menciptakan sebuah objek, suatu class berisi atribut/properti dan method
-- Atribut
+#### Atribut
 ```sh
 public $nama
 ```
