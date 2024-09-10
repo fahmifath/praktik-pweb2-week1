@@ -39,7 +39,7 @@ public function __construct($nama, $nim, $jurusan){
     $this->jurusan = $jurusan;
 }
 ```
-Constructor ini digunakan untuk mengatur nilai awal dari atribut saat objek dibuat.
+Constructor ini digunakan untuk mengatur nilai awal dari atribut saat objek dibuat.</br>
 Perubahan untuk instansiasi objek Mahasiswa mejadi seperti
 ```sh
 //instansiasi objek
