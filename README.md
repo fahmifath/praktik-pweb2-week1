@@ -10,6 +10,6 @@ Pemrograman Berorientasi Objek (OOP) adalah paradigma pemrograman yang sangat pe
 Pemrograman Berorientasi Objek didasarkan pada konsep objek, yang mewakili entitas dalam dunia nyata. Setiap objek memiliki karakteristik yang disebut atribut (properti), dan dapat melakukan tindakan tertentu yang disebut metode (fungsi). OOP membantu dalam memecah kode menjadi bagian-bagian yang lebih kecil dan lebih mudah dikelola.
 Untuk lebih jelasnya dapat melihat materi berikut
 ## Daftar isi
-- [Jobsheet 1](https://github.com/fahmifath/praktik-pweb2-week1/tree/main/jobsheet-1)
-- [Jobsheet 2](https://github.com/fahmifath/praktik-pweb2-week1/tree/main/jobsheet-2)
-- [Jobsheet 3](https://github.com/fahmifath/praktik-pweb2-week1/tree/main/jobsheet-3)
+[Jobsheet 1](https://github.com/fahmifath/praktik-pweb2-week1/tree/main/jobsheet-1)
+[Jobsheet 2](https://github.com/fahmifath/praktik-pweb2-week1/tree/main/jobsheet-2)
+[Jobsheet 3](https://github.com/fahmifath/praktik-pweb2-week1/tree/main/jobsheet-3)
