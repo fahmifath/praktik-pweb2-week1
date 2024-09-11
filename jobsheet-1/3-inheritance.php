@@ -17,5 +17,4 @@ class Dosen extends Pengguna {
 //instansiasi objek dosen
 $dosen = new Dosen();
 //menjalankan method getnama
-echo $dosen->getNama('Zahran');//output: Zahran
-    
+echo $dosen->getNama('Fahmi');//output: Fahmi

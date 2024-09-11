@@ -23,3 +23,6 @@ echo "Akses fitur mahasiswa:".$mhs->aksesFitur()."<br>";
 //instansiasi objek dosen
 $dosen = new Dosen();
 echo "Akses fitur dosen:".$dosen->aksesFitur()."<br>";
+//output: 
+//Akses fitur mahasiswa: Ini akses fitur mahasiswa
+//Akses fitur dosen: Ini akses fitur dosen

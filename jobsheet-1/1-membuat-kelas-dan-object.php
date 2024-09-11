@@ -5,13 +5,6 @@ class Mahasiswa {
     public $nama;
     public $nim;
     public $jurusan;
-    
-    //membuat fungsi menginisialisasikan class mahasiswa
-    public function __construct($nama, $nim, $jurusan){
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
 
     //fungsi untuk menampilkan data
     public function tampilkanData(){
@@ -20,6 +13,9 @@ class Mahasiswa {
 }
 
 //instansiasi objek mahasiswa 
-$mhs = new Mahasiswa('Zahran', '123123', 'Akuntansi');
+$mhs = new Mahasiswa();
+$mhs->nama = "Fahmi";
+$mhs->nim = "123123";
+$mhs->jurusan = "Komputer";
 //menjalankan method menampilkan data
-$mhs->tampilkanData(); //output: Zahran, 123123, Akuntansi
+$mhs->tampilkanData(); //output: Fahmi, 123123, Komputer

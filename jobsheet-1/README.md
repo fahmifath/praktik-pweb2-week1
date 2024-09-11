@@ -28,13 +28,6 @@ class Mahasiswa {
     public $nama;
     public $nim;
     public $jurusan;
-    
-    //membuat fungsi menginisialisasikan class mahasiswa
-    public function __construct($nama, $nim, $jurusan){
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
 
     //fungsi untuk menampilkan data
     public function tampilkanData(){
@@ -43,9 +36,12 @@ class Mahasiswa {
 }
 
 //instansiasi objek mahasiswa 
-$mhs = new Mahasiswa('Zahran', '123123', 'Akuntansi');
+$mhs = new Mahasiswa();
+$mhs->nama = "Fahmi";
+$mhs->nim = "123123";
+$mhs->jurusan = "Komputer";
 //menjalankan method menampilkan data
-$mhs->tampilkanData(); //output: Zahran, 123123, Akuntansi
+$mhs->tampilkanData(); //output: Fahmi, 123123, Komputer
 ```
 ## 2. Prinsip OOP
 ### 2.1. Enkapsulasi (Encapsulation)
@@ -74,46 +70,6 @@ class Mahasiswa
     private $nim;
     private $jurusan;
 
-    //fungsi untuk menginisialisasikan class mahasiswa
-    public function __construct()
-    {
-        $this->nama = null;
-        $this->nim = null;
-        $this->jurusan = null;
-    }
-    //metode setter
-    //fungsi untuk mengatur value dari atribut nama 
-    public function setNama($nama)
-    {
-        $this->nama = $nama;
-    }
-    //fungsi untuk mengatur value dari inputan nim
-    public function setNim($nim)
-    {
-        $this->nim = $nim;
-    }
-    //fungsi untuk mengatur value dari inputan jurusan
-    public function setJurusan($jurusan)
-    {
-        $this->jurusan = $jurusan;
-    }
-    //metode getter
-    //fungsi untuk mengambil value nama 
-    public function getNama()
-    {
-        return $this->nama;
-    }
-    //fungsi untuk mengambil value nim
-    public function getNim()
-    {
-        return $this->nim;
-    }
-    //fungsi untuk mengambil value jurusan
-    public function getJurusan()
-    {
-        return $this->jurusan;
-    }
-
     //fungsi untuk menampilkan data nama, nim, dan jurusan
     public function tampilkanData()
     {
@@ -123,12 +79,11 @@ class Mahasiswa
 
 //iinstansiasi objek mahsiswa
 $mhs = new Mahasiswa();
-//menjalankan method setnama, setnim, setjurusan, dan menampilkan data
-$mhs->setNama('Zahran');
-$mhs->setNim('123123');
-$mhs->setJurusan('TI');
-$mhs->tampilkanData();//output: Zahran, 123123, TI
-
+//tidak bisa mengubah value dari atribut nama, nim dan jurusan karena emiliki hak akses private
+$mhs->nama = "Fahmi";
+$mhs->nim = "123123";
+$mhs->jurusan = "Komputer";
+$mhs->tampilkanData();//output: tidak ada, karena tidak bisa mengakses private property
 ```
 ### 2.2. Inheritance
 ```sh
@@ -158,8 +113,7 @@ class Dosen extends Pengguna {
 //instansiasi objek dosen
 $dosen = new Dosen();
 //menjalankan method getnama
-echo $dosen->getNama('Zahran');//output: Zahran
-    
+echo $dosen->getNama('Fahmi');//output: Fahmi
 ```
 ### 2.3. Polymorphism
 ```sh
@@ -181,30 +135,33 @@ Polymorphism adalah kemampuan fungsi untuk memproses objek dari kelas yang berbe
 //membuat class pengguna
 class Pengguna {
     //method aksesfitur
-    public function aksesFitur($akses){
-        return $akses;
+    public function aksesFitur(){
+        return "Ini akses fitur pengguna";
     }
 }
 //membuat class mahasiswa yg merupakan child/turunan dari class pengguna
 class Mahasiswa extends Pengguna {
-    //method akses fitur
-    public function getAkses(){
-        return $this->aksesFitur('Akses fitur mahasiswa');
+    //method aksesfitur
+    public function aksesFitur(){
+        return "Ini akses fitur mahasiswa";
     }
 }
 //membuat class mahasiswa yg merupakan child/turunan dari class pengguna
 class Dosen extends Pengguna {
     //method akses fitur
-    public function getAkses(){
-        return $this->aksesFitur('Akses fitur dosen');
+    public function aksesFitur(){
+        return "Ini akses fitur dosen";
     }
 }
 //instansiasi objek mahasiswa
 $mhs = new Mahasiswa();
-echo "Akses fitur mahasiswa: ".$mhs->getAkses()."<br>";
+echo "Akses fitur mahasiswa: ".$mhs->aksesFitur()."<br>";
 //instansiasi objek dosen
 $dosen = new Dosen();
-echo "Akses fitur dosen: ".$dosen->getAkses();
+echo "Akses fitur dosen: ".$dosen->aksesFitur();
+//output: 
+//Akses fitur mahasiswa: Ini akses fitur mahasiswa
+//Akses fitur dosen: Ini akses fitur dosen
 ```
 ### 2.4. Abstraction
 ```sh
@@ -246,4 +203,7 @@ echo "Akses fitur mahasiswa:".$mhs->aksesFitur()."<br>";
 //instansiasi objek dosen
 $dosen = new Dosen();
 echo "Akses fitur dosen:".$dosen->aksesFitur()."<br>";
+//output: 
+//Akses fitur mahasiswa: Ini akses fitur mahasiswa
+//Akses fitur dosen: Ini akses fitur dosen
 ```
